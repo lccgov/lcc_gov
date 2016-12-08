@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css?family=Quattrocento');
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,700,800,400,600');
+
+
+// headerTop.scss -- responsive icons color
+$menu-link-color:#333;
+$search-link-background:#F3F3F4;
+$search-link:#333;
+
+
+$base-background-color:#2c3e50;
+$base-font-size:16px;
+$font-primary: 'Oswald', Helvetica, Arial;
+$font-secondary:'Quattrocento', Helvetica, Arial; // secondary font
+
+$base-font-color:#fff;
+$btn-background-color:#e7cc26;
+$base-margin-bottom:20px;
+
+// mainNav.scss
+$main-nav-background:lighten(#161f28,5%);
+// masterhead.scss
+
+$head-background:#fff;
+
+//footer.scss
+$footer-nav-link:#fff;
+
+// sectionSubsite.scss - socialamedia.scss - blockLinks.scss
+$section-Background:#efefef;
+
+//  socialamedia.scss
+$social-link-color:#e7cc26;
+
+
+//  sideNavigation.scss
+$side-nav-active-background:#133E8D !default;
+
+//  carousel.scss
+$carousel-active-background:#000;
+$carousel-indicators-active-background:#ccc;
+$carousel-caption-background: rgba(60,0,0,0.6);
+$carousel-caption-font-color:#fff;
+
+// blocklinks.scss
+
+$block-link-back:#fff;
+$block-link-back-hover:#3380A4;
+
+$promo-group-border:10px solid #ddd; 
+$promo-group-background:#ddd; 
+$promo-group-li-background:#fff;
+$promo-group-link-color:#333 !default;
+
+//promolist webpart
+$link-font-color:#fff;
+$span-info-color:#222E3C;
+$span-info-hover:#131A22;
+$span-info-secondary-color:#E6CC26;
+$span-arrow-base:#131A22;
+$span-third-info-base:#fff;
+$third-info-font-color:#333;
+$arrow-color:#E6CC26;
+$contentFontColor:#fff;
+$content-arrow-color:#E6CC26;
+$content-border-color:#ddd;
+
+
+
+//@import 'base';
+//@import 'cookieBanner';
+//@import 'masterHead';
+@import 'mainMenu';
+@import 'breadcrumb';
+@import 'variables';
+@import 'mixins';
+//@import 'footer';
+@import 'promo';
+@import 'carousel';
+@import 'socialMedia';
+@import 'sideNavigation';
+//@import 'globalSearch';
+//@import 'typography';
+@import 'accordion';
+@import 'promoGroup';
+@import 'alerts';
+@import 'promoListwebpart';
+@import 'eventsWebparts';
+@import 'brandColors';
+@import 'sharepointOverides';
+//@import 'iconLinks';
+//@import 'heroBanner';
+
+
+
+
+
+body{
+    font-weight:300;
+}
+
+.masterhead input {
+    color:#333;
+}
+
+// logo overides to accomodate diiferent logo aspect ratios
+.sectionHeader{
+    padding:0px;
+    background:#2c3e50;
+
+
+ 
+
+        
+ .logo{
+        height:192px;
+        width:100%;
+        background:url(../images/logo.svg) center top no-repeat;
+        margin:-20px 0;
+
+        @media (max-width: 767px){
+            width:100%;
+        }
+
+    }
+      }
+
+
+
+.header-left {
+    width:100%;
+}
+
+
+
+
+
+.sectionTwo{
+    background:#161f28;
+}
+
+
+
+
+.sectionOne{
+    background:#fff;
+    color:#333;
+    h1, h2, h3, h4, h5, ul, ol, p, input {
+    font-family:$font-primary;
+    color:#333;
+}
+
+}
+
+.eventsContentPod h3, .venuesContentPod h3 {
+    margin-top: 0px;
+    color: #006da5;
+}
+
+.breadcrumb span,  span.eventDetailsBlockIcon , label span {
+    color:#333;
+}
+
+#DeltaWebPartAdderUpdatePanelContainer {
+    z-index:1000;
+}
+
+#loading {
+   background:#fff; 
+}
+
+
+
+ .ui-widget {
+	background: #fff;
+	border: none;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	box-shadow: 2px 2px 0px 0px #ccd5d7;
+}
+
+ .ui-datepicker {
+	padding: 0;
+}
+
+ .ui-datepicker-header {
+	border: none;
+	border-bottom: 1px solid transparent;
+	background:$eventsfilter-hightlight-color;
+	font-weight: normal;
+	font-size: 12px;
+	text-transform: uppercase;
+    position:relative;
+}
+
+ .ui-datepicker-header .ui-state-hover {
+	background: transparent;
+	border-color: transparent;
+	cursor: pointer;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+ .ui-datepicker .ui-datepicker-title {
+	margin-top: 0;
+	margin-bottom: 0;
+    padding:20px 0 19px 0;
+    text-align:center;
+    color:#fff;
+    font-size:12px;
+}
+
+ .ui-datepicker .ui-datepicker-prev-hover,
+ .ui-datepicker .ui-datepicker-next-hover,
+ .ui-datepicker .ui-datepicker-next,
+ .ui-datepicker .ui-datepicker-prev {
+	top: 1.7em;
+	border:none;
+    position:absolute;
+    height: 100%;
+    padding: 0 10px;
+
+    span{
+     display:none;
+    }
+
+    &:hover{
+        background:darken($eventsfilter-hightlight-color,10%);
+        text-decoration: none;
+    }
+}
+
+ .ui-datepicker .ui-datepicker-prev-hover {
+	left: 0px;
+}
+
+.ui-datepicker .ui-datepicker-next-hover {
+	right: 0px;
+}
+
+.ui-datepicker .ui-datepicker-next 
+.ui-datepicker .ui-datepicker-prev  {
+
+
+	margin-top: 0;
+	top: 0;
+	font-weight: normal;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+	left:0px;
+    top:0px;
+}
+
+.ui-datepicker .ui-datepicker-next {
+	right:0px;
+    top:0px;
+}
+
+
+
+
+.ui-datepicker .ui-datepicker-prev:after {
+	    font-family: FontAwesome;
+    content: "\f104";
+    font-size: 35px;
+    color:#fff;
+    line-height:1.6em;
+}
+
+.ui-datepicker .ui-datepicker-next:after {
+	    font-family: FontAwesome;
+    content: "\f105";
+    font-size: 35px;
+    color:#fff;
+    line-height:1.6em;
+}
+
+ .ui-datepicker table {
+	margin: 0;
+    width:250px;
+}
+
+.ui-datepicker th {
+	padding: 1.5em 0;
+	color: #333;
+	font-size: 10px;
+	font-weight: normal;
+	text-transform: uppercase;
+	border: none;
+    background:#efefef;
+    text-align:center;
+}
+
+ .ui-datepicker td {
+	border: none;
+	padding: 0;
+}
+
+ td .ui-state-default {
+	background: transparent;
+	border: none;
+	text-align: center;
+	padding: 1em 0;
+	margin: 0;
+	font-weight: normal;
+	color: #333;
+	font-size: 12px;
+    display:block;
+}
+
+ td .ui-state-active,
+ td .ui-state-hover {
+	background: $eventsfilter-hightlight-color;
+	border-radius:0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+}
+
+
+
